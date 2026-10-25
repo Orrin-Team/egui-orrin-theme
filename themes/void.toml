@@ -1,0 +1,10 @@
+name = "Void"
+text = [220, 224, 230]
+panel = [16, 16, 18]
+window = [22, 22, 25]
+extreme = [10, 10, 12]
+faint = [28, 28, 32]
+widget = [38, 38, 44]
+widget_hover = [50, 50, 58]
+outline = [44, 44, 50]
+accent = [140, 120, 255]

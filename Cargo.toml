@@ -1,0 +1,29 @@
+[package]
+name = "egui-orrin-theme"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "A dense, dark egui theme derived from nine greys and an accent, from the Orrin engine's editor."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/Orrin-Team/egui-orrin-theme"
+keywords = ["egui", "theme", "gui", "dark-mode"]
+categories = ["gui"]
+include = ["src/**", "assets/**", "themes/**", "examples/**", "README.md", "LICENSE-*"]
+
+[features]
+default = ["fonts", "icons", "toml"]
+# JetBrains Mono (OFL) as the first monospace face. Adds 270 KB to the binary.
+fonts = []
+# The Phosphor icon font (MIT) and a handful of named glyphs. Adds 0.5 MB.
+icons = []
+# `ThemeSet::load`: a folder of user `*.toml` themes.
+toml = ["dep:toml"]
+
+[dependencies]
+egui = { version = "0.31", default-features = false }
+serde = { version = "1", features = ["derive"] }
+toml = { version = "1", optional = true }
+
+[dev-dependencies]
+eframe = "0.31"
+toml = "1"
